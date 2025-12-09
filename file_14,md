@@ -1,0 +1,173 @@
+## ⚡ **Introduction to Binary Number System**
+
+**Binary Number System** ek aisi pranaali hai jismein **keval do ank hote hain: 0 aur 1**. Yeh pranaali **Base-2** par aadharit hai, jabki hamari dainik jeevan mein upyog hone wali **Decimal System Base-10** par aadharit hoti hai. **Computer aur digital upkaran mein binary pranaali ka upyog** isliye kiya jata hai kyunki ve electronic circuit mein do sthitiyon (jaise, ON aur OFF) ko aasani se pehchaan sakte hain.
+
+---
+
+## 🖥️ **Importance of Binary in Computers**
+
+* **Computer System mein Upyog:** Computer **binary pranaali ka upyog data sangrah, processing aur sanchar** ke liye karte hain.
+
+* **Digital Circuit Design:** Logic gates aur digital circuit **binary input aur output** ke saath karya karte hain.
+
+* **Data Sampidan aur Encryption:** Binary pranaali ka upyog **data ko sampidit karne aur surakshit karne** ke liye kiya jata hai.
+
+---
+
+## ⚡ **Binary Ankganit**
+
+Binary pranaali mein ganitiy kriyaayein (jod, ghatav, guna, bhaag) decimal jaise hi hoti hain, lekin **sirf 0 aur 1** ke saath.
+
+```
+  1011  (11 decimal)
++ 1101  (13 decimal)
+------
+11000  (24 decimal)
+```
+
+---
+
+## ✅ **Step 1: Decimal se Binary mein Convert kaise karein?**
+
+### **Rule:**
+
+Kisi bhi decimal number ko 2 se divide karte raho aur remainder likhte jao. Jab tak quotient 0 na ho jaye, ye process repeat karo. **Phir remainders ko neeche se upar padho**, wahi **binary representation** hoga.
+
+### **Examples:**
+
+* **13 → Binary:** 1101 ✅
+* **9 → Binary:** 1001 ✅
+* **7 → Binary:** 111 ✅
+* **19 → Binary:** 10011 ✅
+* **25 → Binary:** 11001 ✅
+* **37 → Binary:** 100101 ✅
+* **45 → Binary:** 101101 ✅
+* **58 → Binary:** 111010 ✅
+* **10 → Binary:** 1010 ✅
+
+### **⚡ Trick:**
+
+* **Odd Numbers** ka binary **1 se khatam hota hai**
+* **Even Numbers** ka binary **0 se khatam hota hai**
+
+---
+
+## ⚡ **Binary ko Kitni Bits mein Likhen?**
+
+* **Minimum Bits:** Binary number represent karne ke liye minimum bits chahiye hoti hain.
+* **Common Standards:** 4-bit, 8-bit, 16-bit, 32-bit
+
+**Leading Zeros** ka koi fark nahi padta:
+
+Example:
+
+* 5 = 101 = 0101 = 00000101
+
+### **Examples:**
+
+* **4-bit:** 7 → 0111, 9 → 1001
+* **8-bit:** 7 → 00000111, 9 → 00001001
+* **16-bit:** 7 → 00000000 00000111
+
+---
+
+## ✅ **Step 2: Binary se Decimal mein Convert kaise karein?**
+
+### **Rule:**
+
+Har bit ko 2 ke power se multiply karo (position right se left count karo, starting from 0). Jahan bit 1 hoga, uska value count hoga.
+
+### **Formula:**
+
+```
+Decimal = (b_n × 2^n) + (b_(n-1) × 2^(n-1)) + ... + (b_0 × 2^0)
+```
+
+### **Examples:**
+
+* **1011 → 11**
+* **11010 → 26**
+* **110110 → 54**
+* **101111 → 47**
+* **10011 → 19**
+* **1010 → 10**
+* **11101 → 29**
+
+---
+
+## ✅ **Step 3: Bits aur Positions Samjho**
+
+**Binary:** 1101
+
+**Position Values:**
+
+```
+Bit     = 1   1   0   1
+Power   = 8   4   2   1
+Value   = 8 + 4 + 0 + 1 = 13
+```
+
+* **Rightmost bit:** LSB (Least Significant Bit)
+* **Leftmost bit:** MSB (Most Significant Bit)
+
+---
+
+## 📌 **Bit Positions & Shifts**
+
+### **Left Shift (<<):**
+
+Bayein dhakelna ➔ value double hoti hai
+
+**Example:**
+
+* 5 << 1 = 10 (5 × 2)
+* 5 << 2 = 20 (5 × 4)
+
+### **Right Shift (>>):**
+
+Daaein dhakelna ➔ value aadhi hoti hai
+
+**Example:**
+
+* 8 >> 1 = 4 (8 ÷ 2)
+* 16 >> 2 = 4 (16 ÷ 4)
+
+### **Shift Examples:**
+
+* 6 << 2 = 24
+* 32 >> 3 = 4
+* 15 << 1 = 30
+* 40 >> 2 = 10
+* 18 << 2 = 72
+* 7 << 3 = 56
+* 25 << 2 = 100
+* 128 >> 3 = 16
+* 11 << 1 = 22
+
+---
+
+## 🚀 **Real-Life Example (Game Development)**
+
+Game character ki speed = 10
+
+* **Power-up:**
+
+  * `new_speed = speed << 1` ➔ 20
+* **Damage:**
+
+  * `new_speed = speed >> 1` ➔ 5
+
+---
+
+## ⚡ **Signed vs Unsigned Shift**
+
+* **Unsigned Right Shift (>>>)**: JavaScript mein, sign bit ko ignore karta hai
+* **Signed Right Shift (>>)**: Negative numbers mein sign maintain karta hai
+
+---
+
+## 💡 **Key Points**
+
+* **Left Shift (<<)** = Multiply by 2^n
+* **Right Shift (>>)** = Divide by 2^n
+* **Faster than normal operations**, CPU ke liye optimized hota hai
